@@ -12,15 +12,16 @@ Edit wsg_50_finger_right_1 { Q=<T t(0 0 -0.023) d(180 0 1 0) d(180 0 0 1)> }
 
 #frame endeff(iiwa_link_7){ shape=marker Q=<T t(0 0 .12) d(180 1 0 0) d(180 0 0 1)> color=[1 1 0] size=[.05 .1 .1 0] }
 
-frame endeff(world){ type=ssBox Q=<T d(90 0 0 1) t(0 0 .08)> size=[.05 .05 .1 .02] color=[1. 1. 0] }
+frame endeff(world){ type=ssBox Q=<T d(90 0 0 1) t(.0 0 0.12)> size=[.03 .03 .03 .02] color=[1. 1. 0]  logical={ gripper } }
 
 ## zero position
 
 Edit iiwa_joint_1 { q= 0.0 }
-Edit iiwa_joint_2 { q= 0.5 }
-Edit iiwa_joint_3 { q= 0.5 }
-Edit iiwa_joint_4 { q= -0.5 }
-Edit iiwa_joint_5 { q= -0.5 }
+Edit iiwa_joint_2 { q= -0.5 }
+Edit iiwa_joint_3 { q= 0 }
+Edit iiwa_joint_4 { q= -1.5 }
+Edit iiwa_joint_5 { q= 0.0 }
 Edit iiwa_joint_6 { q= 0.7 }
 Edit iiwa_joint_7 { q= .0 }
-Edit wsg_50_base_joint_gripper_left { q=.08 }
+Edit wsg_50_base_joint_gripper_left { q=.1 }
+Edit wsg_50_base_joint_gripper_right { q=.1 }
